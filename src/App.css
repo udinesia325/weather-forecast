@@ -1,38 +1,165 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+:root{
+--primary-color:#00B0FF;
+--primary-font: 'Roboto', sans-serif;
+--secondary-font: 'Bebas Neue', cursive;
+}
+body{
+padding:0px !important;
+margin:0px !important;
+overflow:hidden;
+width:100vw;
+height:100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.bg-default{
+background:var(--primary-color) !important;
+}
+.home-wrapper {
+	background:white;
+	top:0;
+	bottom:0;
+	right:0;
+	left:0;
+	padding-top:30vh;
+	transition:all 1s ease;
+
+
+}
+.home-wrapper .row div:nth-child(1){
+	font-size:0.75rem;
+}
+.home-wrapper .row div:nth-child(1) button{
+background:var(--primary-color);
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/*** untuk bagian cuaca ***/
+.row:nth-child(2){
+margin-top:5vh;
+}
+.weather-wrapper{
+	min-height:20vh;
+}
+.weather-wrapper .form-control{
+padding:5px 10px;
+font-size:1.5rem;
+font-weight:bold;
+border-bottom:3px solid  var(--primary-color);
+}
+/*****untuk bagian loading******/
+.loader-wrapper{
+min-height:30%;
+
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+img{
+width:388px;
+height:300px;
 }
 
-.App-link {
-  color: #61dafb;
+select:focus {
+outline:none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/**untuk glombang****/
+.wave {
+	position:absolute;
+	z-index:-99;
+	height:100vh;
+	width:110vw;
+	background-image:linear-gradient(transparent 55%,#a2d9ff 10%);
+	bottom:0 !important;
+
 }
+
+.accordion .card-header{
+border:5px solid white;
+border-bottom:5px solid black !important;
+background:white ;
+}
+
+/**untuk data di atas ***/
+.maininfo .suhu {
+font-size:4rem;
+margin-left:10px;
+font-family:var(--secondary-font);
+}
+
+.maininfo h5{
+font-family:var(--primary-font);
+}
+
+
+
+
+
+/**untuk card forecast***/
+
+.forecast .card{
+min-height:200px;
+}
+
+.forecast p{
+font-size:.65rem;
+font-family:var(--primary-font);
+}
+
+
+
+
+
+
+@media screen and  (min-width:500px){
+
+
+
+	.home-wrapper .row div:nth-child(1){
+		display:flex;
+		flex-direction:column;
+		justify-content:center;
+		align-items:center;
+
+
+
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
